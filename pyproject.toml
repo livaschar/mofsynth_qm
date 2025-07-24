@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
+[tool.setuptools.dynamic]
+version = {attr = "mofsynth_qm.__version__"}
+
+[project]
+name = "mofsynth_qm"
+dynamic = ["version"]
+authors = [
+  {name="Charalampos G. Livas", email="livas.charalampos@gmail.com"},
+]
+
+license = {text = "GPL-3.0-only"}
+description = "Package for MOF synthesizability evaluation."
+readme = "README.md"
+requires-python = ">=3.10"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+	"License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: POSIX :: Linux",
+]
+
+
+dependencies = [
+    "matplotlib>=3.7.1",
+    "numpy>=1.24.1",
+    "pymatgen>=2023.5.10",
+    "openpyxl>=3.1.2",
+    "rmsd>=1.5.1"
+]
+
+
+[project.urls]
+Homepage = "https://github.com/livaschar/mofsynth_qm"
+Issues = "https://github.com/livaschar/mofsynth_qm/issues"
+Documentation = "https://mofsynth_qm.readthedocs.io/en/latest/"
+
+[project.scripts]
+mofsynth-qm = "mofsynth_qm.__main__:main"
