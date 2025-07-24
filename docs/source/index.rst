@@ -1,7 +1,7 @@
 .. MOFsynth-QM documentation master file, created by
    sphinx-quickstart on Thu Jul 24 11:20:11 2025.
 
-.. image:: images/mofsynth_logo.svg
+.. image:: images/synth_logo_v3_black.png
    :width: 600
    :align: center
 
