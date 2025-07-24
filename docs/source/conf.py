@@ -43,7 +43,7 @@ html_theme = 'sphinx_rtd_theme'
 #html_static_path = ['_static']
 
 # Path to GitHub repo {group}/{project}  (note that `group` is the GitHub user or organization)
-issues_github_path = "livaschar/mofsynth-qm"
+issues_github_path = "livaschar/mofsynth_qm"
 
 # which is the equivalent to:
 issues_uri = "https://github.com/{group}/{project}/issues/{issue}"
