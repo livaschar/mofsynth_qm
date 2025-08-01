@@ -19,7 +19,7 @@ MOF-Synth is a Python package for synthesizability evaluation, with
 emphasis on reticular chemistry.
 
 .. note::
-    Currently, optimizations are employed using  Universal Forcefield (UFF) potential.
+    Currently, optimizations are employed using semiempirical methods.
 """
 
 __author__ = 'Charalampos G. Livas'
