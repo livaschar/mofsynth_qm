@@ -46,7 +46,7 @@ def command_handler(directory, function, supercell_limit):
     directory : str
         The path to the directory containing CIF files.
     function : str
-        Name of the function to run. Supported values: 'main_run', 'check_opt', 'export_results'.
+        Name of the function to run. Supported values: 'exec', 'verify', 'report'.
     supercell_limit: int
         The maximum length for each edge of the unit cell in Angstroms.
 
@@ -57,11 +57,11 @@ def command_handler(directory, function, supercell_limit):
 
 
     Supported Functions:
-    - 'main_run': Executes the main_run function reading files from the given directory
+    - 'exec': Executes the exec function reading files from the given directory
     and the supercell limit
-    - 'check_opt': Executes the check_opt function that checks
+    - 'verify': Executes the verify function that checks
     which optimization runs are converged.
-    - 'export_results': Executes the export_results function and
+    - 'report': Executes the report function and
     creates files with the results.
     """
     start_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -70,20 +70,19 @@ def command_handler(directory, function, supercell_limit):
     # Get the parent directory (root path)
     root_path = user_dir.parent.resolve()
 
-    if function == 'run':
-        run(user_dir, root_path, supercell_limit)
-    elif function == 'check_opt':
-        check_opt(root_path)
-    elif function == 'export_results':
-        export_results(root_path)
+    if function == 'exec':
+        exec(user_dir, root_path, supercell_limit)
+    elif function == 'verify':
+        verify(root_path)
+    elif function == 'report':
+        report(root_path)
     else:
         print('Wrong function. Aborting...')
         sys.exit()
     end_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     log_time(start_time, end_time, root_path, function)
 
-
-def run(user_dir, root_path, supercell_limit):
+def exec(user_dir, root_path, supercell_limit):
     r"""
     Perform the synthesizability evaluation for MOFs in the specified directory.
 
@@ -198,7 +197,7 @@ def run(user_dir, root_path, supercell_limit):
 
     return MOF.instances, Linkers.instances, MOF.fault_fragment, MOF.fault_smiles
 
-def check_opt(root_path):
+def verify(root_path):
     r"""
     Check the optimization status of linker molecules.
 
@@ -221,7 +220,7 @@ def check_opt(root_path):
     
     return Linkers.converged, Linkers.not_converged
    
-def export_results(root_path):
+def report(root_path):
     r"""
     Export the results of the synthesizability evaluation.
 
