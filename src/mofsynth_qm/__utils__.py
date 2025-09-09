@@ -29,7 +29,7 @@ from datetime import datetime
 
 def log_time(start_time, end_time, directory, function):
     """Writes start and end times into time.txt inside the given directory."""
-    filepath = f"{directory}/time.txt"
+    filepath = f"{directory}/runtime.log"
     with open(filepath, "a") as f:
         f.write("--------------------------------------------------\n")
         f.write(f"Function: {function}\n")
