@@ -21,14 +21,8 @@ Next, create a directory to store the CIF files:
 
         $ mkdir cifs_folder
 
-Important: make sure that turbomole/6.5 is installed on your system by running:
-    
-    .. code-block:: console
-
-        $ module avail
-
 Next, create an input_data folder to store the config.yaml file and the .sh file
-that runs the calculations using TURBOMOLE on your system
+that runs the calculations using XTB on your system
     
     .. code-block:: console
 
@@ -50,20 +44,20 @@ The final structure should look like this
    cifs_folder/
    └── example.cif
    config_dir/
-   └── config.txt
+   └── config.yaml
    └── <your_job>.sh
 
 You are ready to run using the following command:
 
     .. code-block:: console
 
-        $ mofsynth-qm run path/to/cifs_folder 10
+        $ mofsynth-qm exec path/to/cifs_folder 10
 
 
 After the calculations have completed, run:
 
     .. code-block:: console
 
-        $ mofsynth-qm export_results path/to/cifs_folder
+        $ mofsynth-qm report path/to/cifs_folder
 
 Hurray! An **.xlsx file** containing the results will be created in the *mofsynth_tutorial/*
