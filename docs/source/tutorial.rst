@@ -34,8 +34,11 @@ The config.yaml file should have the following format
 
     optimization:
       command: sbatch
-      file: synth_job.sh
+      file: <your_job_opt>.sh
       cycles: 1000
+    singlepoint:
+      command: sbatch
+      file: <your_job_sp>.sh
 
 The final structure should look like this
 
@@ -45,7 +48,10 @@ The final structure should look like this
    └── example.cif
    config_dir/
    └── config.yaml
-   └── <your_job>.sh
+   └── <your_job_opt>.sh
+   └── <your_job_sp>.sh
+
+You can find the .sh scripts in the github repo at mofsynth_qm/src/mofsynth_qm/config_dir.
 
 You are ready to run using the following command:
 
