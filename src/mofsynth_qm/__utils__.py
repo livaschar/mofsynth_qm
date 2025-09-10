@@ -136,8 +136,9 @@ def exec(user_dir, root_path, supercell_limit):
 
         # Check if its already initialized a MOF object. Sometimes the code may break in the middle of a run.
         # This serves as a quick way to ignore already analyzed instances.
-        final_xyz_path = mof.sp_path / "xtbopt.xyz"
-        if final_xyz_path.exists():
+        # notconverged_path = mof.sp_path / ".sccnotconverged"
+        check_path = mof.sp_path / "check.out"
+        if check_path.exists():
             continue
         else:
             # Copy .cif and job.sh in the mof directory
