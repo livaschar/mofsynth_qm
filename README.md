@@ -72,7 +72,7 @@ Easy to use [Web version](https://mofsynth.website) of the tool.
 
 ## 📖 Usage example
 
-Check the [tutorial](https://mofsynth_qm.readthedocs.io/en/latest/tutorial.html).
+Check the [tutorial](https://mofsynth-qm.readthedocs.io/en/latest/tutorial.html).
 
 ## :warning: Problems?
 
@@ -106,3 +106,4 @@ Please consider citing [this publication](https://pubs.acs.org/doi/full/10.1021/
 ## 📑 License
 
 MOFSynth-QM is released under the [GNU General Public License v3.0 only](https://spdx.org/licenses/GPL-3.0-only.html).
+
