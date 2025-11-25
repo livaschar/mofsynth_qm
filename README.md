@@ -1,8 +1,8 @@
 # MOFSynth-QM
 
 <h1 align="center">
-  <!-- <img alt="Logo" src="https://github.com/livaschar/mofsynth_qm/blob/main/docs/source/images/synth_logo_v3_black.png" style="width: 500px;"/> -->
-  <img alt="Logo" src="https://github.com/livaschar/mofsynth_qm/blob/main/docs/source/images/synth_image_v3.png" style="width: 500px;"/>
+  <img alt="Logo" src="https://github.com/livaschar/mofsynth_qm/blob/main/docs/source/images/synth_logo_v3_black.png" style="width: 500px;"/>
+  <!-- <img alt="Logo" src="https://github.com/livaschar/mofsynth_qm/blob/main/docs/source/images/synth_image_v3.png" style="width: 500px;"/> -->
 </h1>
 
 <h4 align="center">
@@ -107,6 +107,7 @@ Please consider citing [this publication](https://pubs.acs.org/doi/full/10.1021/
 ## 📑 License
 
 MOFSynth-QM is released under the [GNU General Public License v3.0 only](https://spdx.org/licenses/GPL-3.0-only.html).
+
 
 
 
