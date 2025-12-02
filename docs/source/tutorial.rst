@@ -35,7 +35,6 @@ The config.yaml file should have the following format
     optimization:
       command: sbatch
       file: <your_job_opt>.sh
-      cycles: 1000
     singlepoint:
       command: sbatch
       file: <your_job_sp>.sh
