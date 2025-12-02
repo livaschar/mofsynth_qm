@@ -113,7 +113,7 @@ def exec(user_dir, root_path, supercell_limit):
     if isinstance(result, str):
         print(f'\033[1;31m\n {result}. Aborting session... \033[m')
         return False
-    run_str_opt, run_str_sp, job_sh_sp, job_sh_opt, opt_cycles = result
+    run_str_opt, run_str_sp, job_sh_sp, job_sh_opt = result
 
     # FIND CIFS
     cifs = []

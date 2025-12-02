@@ -18,7 +18,6 @@ def config_from_file(filepath):
     optimization = config.get('optimization', {})
     run_str_opt = optimization.get('command')
     job_sh_opt = optimization.get('file')
-    cycles = optimization.get('cycles')
     
     # Validate and extract singlepoint section
     singlepoint = config.get('singlepoint', {})
@@ -29,7 +28,6 @@ def config_from_file(filepath):
     required_fields = {
         'optimization.command': run_str_opt,
         'optimization.file': job_sh_opt,
-        'optimization.cycles': cycles,
         'singlepoint.command': run_str_sp,
         'singlepoint.file': job_sh_sp
     }
@@ -37,12 +35,8 @@ def config_from_file(filepath):
     missing_fields = [field for field, value in required_fields.items() if not value]
     if missing_fields:
         return f"Missing required configuration fields: {', '.join(missing_fields)}"
-        
-    # Additional validation for cycles (should be positive integer)
-    if not isinstance(cycles, int) or cycles <= 0:
-        return f"Invalid cycles value: {cycles}. Must be a positive integer."
 
-    return run_str_sp, run_str_opt, job_sh_sp, job_sh_opt, cycles
+    return run_str_sp, run_str_opt, job_sh_sp, job_sh_opt
 
 def copy(path1, path2, file_1, file_2 = None):
     
