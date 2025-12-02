@@ -4,4 +4,3 @@ singlepoint:
 optimization:
   command: sbatch
   file: job_opt.sh
-  cycles: 1000
