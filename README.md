@@ -1,3 +1,7 @@
+# 🔔 WARNING
+This repository is going to be deleted in the coming days. We updated the code and moved it to [MOFSynth-ADV](https://github.com/livaschar/mofsynth_adv)
+
+
 # MOFSynth-QM
 
 <h1 align="center">
